@@ -1,11 +1,11 @@
 {
-  "name": "Hello Extensions",
-  "description": "Base Level Extension",
+  "name": "SuiteProjects Timesheets Autofill",
+  "description": "Autofill repetetive data into multiple fields of SuiteProjects Pro timesheets.",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
+    "default_popup": "options.html",
+    "default_icon": "icon.png"
   },
   "content_scripts": [
       {
