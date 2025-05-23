@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <title>Timesheets Autofiller</title>
+  </head>
+  <body>
+    <div>
+        <label for="projectPrefix">Project prefix</label>
+        <input type="text" id="projectPrefix">
+    </div>
+
+    <div>
+        <label for="task">Task</label>
+        <select name="task" id="task">
+            <option value="Billable">Billable</option>
+            <option value="Non-Billable">Non-Billable</option>
+            <option value="Time Off">Time Off</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="timeType">Time type</label>
+        <select name="timeType" id="timeType">
+            <option value="Offshore">Offshore</option>
+            <option value="Offshore Overtime">Offshore Overtime</option>
+            <option value="Onsite">Onsite</option>
+            <option value="Onsite Overtime">Onsite Overtime</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="hours">Hours</label>
+        <input type="number" id="hours" min="0">
+    </div>
+
+    <div>
+        <label for="administrativeTime">Administrative time</label>
+        <input type="number" id="administrativeTime" min="0">
+    </div>
+
+    <button id="fill-button">Autofill timesheets</button>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
+
