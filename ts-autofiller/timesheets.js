@@ -3,7 +3,7 @@ function evaluateExternalArgs() {
         return globalArgs
     }
     return {
-        projectPrefix: "Google",
+        projectPrefix: "",
         task: "Billable",
         timeType: "Offshore",
         hours: 8,
@@ -31,9 +31,16 @@ function evaluateExternalArgs() {
             break
         } 
     }
+    // ':' means blank
+    if (selects[0].value === ':') {
+        // option 0 is always ':', 1 is the first project
+        selects[0].value = selects[0].querySelectorAll("option")[1].value
+        selects[0].dispatchEvent(new Event('change', { bubbles: true }));
+    }
 
     for (let option of selects[1].querySelectorAll("option")) {
-        if (option.innerText.includes(globalArgs.task + " ")) {
+        const regexp = new RegExp(`^\\d:\\s${globalArgs.task}\\s\\[.*$`)
+        if (regexp.test(option.innerText)) {
             selects[1].value = option.value
             selects[1].dispatchEvent(new Event('change', { bubbles: true }));
             break
@@ -41,7 +48,8 @@ function evaluateExternalArgs() {
     }
 
     for (let option of selects[2].querySelectorAll("option")) {
-        if (option.innerText === globalArgs.timeType) {
+        const regexp = new RegExp(`^${globalArgs.timeType}$`)
+        if (regexp.test(option.innerText)) {
             selects[2].value = option.value
             selects[2].dispatchEvent(new Event('change', { bubbles: true }));
             break
@@ -51,6 +59,7 @@ function evaluateExternalArgs() {
     let hours = Array.from(emptyRow.querySelectorAll(".timesheetHours input")).slice(0, 5)
     for (let input of hours) {
         input.value = globalArgs.hours
+        input.dispatchEvent(new Event('change', { bubbles: true }));
     }
 
     let noteAdd = Array.from(emptyRow.querySelectorAll(".noteAddSmall")).slice(0, 5)
@@ -60,15 +69,18 @@ function evaluateExternalArgs() {
 
         let notes = document.querySelector(".dialogControls textarea")
         notes.value = globalArgs.notes
+        notes.dispatchEvent(new Event('change', { bubbles: true }));
 
         let overtimeType = dialogSelect[0]
         for (let option of overtimeType.querySelectorAll("option")) {
             if (globalArgs.overtimeType === "None") {
                 overtimeType.value = "__BLANK"
+                overtimeType.dispatchEvent(new Event('change', { bubbles: true }));
                 break
             }
             if (option.innerText == globalArgs.overtimeType) {
                 overtimeType.value = option.value
+                overtimeType.dispatchEvent(new Event('change', { bubbles: true }));
             }
         }
 
@@ -76,10 +88,12 @@ function evaluateExternalArgs() {
         for (let option of compensationType.querySelectorAll("option")) {
             if (globalArgs.compensationType === "None") {
                 compensationType.value = "__BLANK"
+                compensationType.dispatchEvent(new Event('change', { bubbles: true }));
                 break
             }
             if (option.innerText == globalArgs.compensationType) {
                 compensationType.value = option.value
+                compensationType.dispatchEvent(new Event('change', { bubbles: true }));
             }
         }
 
@@ -87,10 +101,12 @@ function evaluateExternalArgs() {
         for (let option of administrativeTime.querySelectorAll("option")) {
             if (globalArgs.administrativeTime === "None") {
                 administrativeTime.value = "__BLANK"
+                administrativeTime.dispatchEvent(new Event('change', { bubbles: true }));
                 break
             }
             if (option.innerText == globalArgs.administrativeTime) {
                 administrativeTime.value = option.value
+                administrativeTime.dispatchEvent(new Event('change', { bubbles: true }));
             }
         }
 

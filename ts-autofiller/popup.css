@@ -1,3 +1,8 @@
 body {
     min-width:300px;
 }
+
+.options-inline {
+    display: inline-block
+}
+

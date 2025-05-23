@@ -47,6 +47,40 @@ window.onload = function() {
         })
     });
 
+    document.getElementById("reset-dialog").addEventListener("click", (event) => {
+        notes.value = ""
+        overtimeType.value = "None"
+        compensationType.value = "None"
+        administrativeTime.value = "None"
+        chrome.storage.sync.set({
+            projectPrefix: projectPrefix.value,
+            task: task.value,
+            timeType: timeType.value,
+            hours: hours.value,
+            notes: notes.value,
+            overtimeType: overtimeType.value,
+            compensationType: compensationType.value,
+            administrativeTime: administrativeTime.value
+        })
+    });
+
+    document.getElementById("reset-main").addEventListener("click", (event) => {
+        projectPrefix.value = ""
+        task.value = "Billable"
+        timeType.value = "Offshore"
+        hours.value = "8"
+        chrome.storage.sync.set({
+            projectPrefix: projectPrefix.value,
+            task: task.value,
+            timeType: timeType.value,
+            hours: hours.value,
+            notes: notes.value,
+            overtimeType: overtimeType.value,
+            compensationType: compensationType.value,
+            administrativeTime: administrativeTime.value
+        })
+    });
+
     chrome.storage.sync.get('projectPrefix', function(data) {
         if (typeof data.projectPrefix === 'undefined') {
             projectPrefix.value = "Google"
