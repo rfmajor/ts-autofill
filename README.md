@@ -1,11 +1,11 @@
-# Description
+## Description
 
 SuiteProjects Pro Timesheets Autofill is a simple extension which lets you
 autofill repetetive data into multiple fields of SuiteProjects Pro timesheets.
 If you're lazy like me and don't want to click through multiple windows to
 enter the same thing over and over, this extension is for you!
 
-# Installation and usage
+## Installation and usage
 
 To install the extension, follow below steps:
 
