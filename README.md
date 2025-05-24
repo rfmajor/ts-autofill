@@ -21,10 +21,11 @@ You should see a popup like this:
 
 ![Popup](./popup.png)
 
-Fill all the fields according to your needs. If `Project prefix` is empty, the
-first project from the dropdown menu will be used. After clicking the `Autofill
-timesheets` button you should see that a new filled row appeared on the page.
-You can click it multiple times to insert additional rows if needed. 
+Fill all the fields according to your needs. The `Project prefix` field is
+case-sensitive. If it's empty, the first project from the `Customer : Project`
+dropdown menu will be used. After clicking the `Autofill timesheets` button you
+should see that a new filled row appeared on the page. You can click it
+multiple times to insert additional rows if needed. 
 
 That's it, I hope I made submitting timesheets a little bit more convenient for
 you :)
