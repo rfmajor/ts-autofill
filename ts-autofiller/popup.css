@@ -1,5 +1,23 @@
 body {
-    min-width:300px;
+    background-color: #e0e0e0;
+    min-width:350px;
+}
+
+label {
+    float: left;
+    width: 120px;
+    padding: 3px;
+}
+
+.input-field {
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 3px;
+}
+
+.input-field-container {
+    margin: 5px;
 }
 
 .options-inline {
@@ -13,4 +31,34 @@ body {
 
 .autofill-button {
     padding: 10px;
+    background-color: #f5b709;
+    border: none;
+    text-align: center;
+    border-radius: 7px;
+    color: #fffaed;
+    font-family: arial;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 8px;
+}
+
+.autofill-button:hover {
+    background-color: #f9c719;
+}
+
+.reset-button {
+    margin-left: 5px;
+    padding: 5;
+    border: none;
+    text-align: center;
+    border-radius: 7px;
+    color: #fffaed;
+    background-color: #1f3a4b;
+    font-family: arial;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reset-button:hover {
+    background-color: #2c5266;
 }
