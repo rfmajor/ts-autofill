@@ -7,6 +7,7 @@ windows to enter the same thing over and over, this extension is for you!
 
 ## Installation and usage
 
+### Installation
 To install the extension, follow below steps:
 
 1. Pull the code from this repository to your device.
@@ -15,15 +16,21 @@ To install the extension, follow below steps:
 4. Go to `My extensions` and click `Load unpacked`.
 5. Select the `ts-autofiller` directory from your device.
 
+### Usage
 To use the extension, login to [SuiteProjects Pro](https://auth.netsuitesuiteprojectspro.com),
 navigate to the timesheet submit form and simply click on the extension icon.
 You should see a popup like this:
 
+![Popup](./popup.png)
+
 Fill all the fields according to your needs. The `Project prefix` field is
 case-sensitive. If it's empty, the first project from the `Customer : Project`
 dropdown menu will be used. After clicking the `Autofill timesheets` button you
-should see that a new filled row appeared on the page. You can click it
-multiple times to insert additional rows if needed. 
+should see that a new filled row appeared on the page.
+
+`Note: currently Monday-Friday are the only days which are taken into account.`
+
+You can click the button multiple times to insert additional rows if needed. 
 
 ### Reloading
 In case you need to reload the extension, just go to `chrome://extensions/` ->
