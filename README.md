@@ -25,6 +25,7 @@ dropdown menu will be used. After clicking the `Autofill timesheets` button you
 should see that a new filled row appeared on the page. You can click it
 multiple times to insert additional rows if needed. 
 
+## Demo
 https://github.com/user-attachments/assets/bf96ab66-303f-4f22-8b4b-ee020d07b30c
 
 That's it, I hope I made submitting timesheets a little bit more convenient for
