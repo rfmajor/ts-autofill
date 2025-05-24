@@ -15,7 +15,17 @@ To install the extension, follow below steps:
 4. Go to `My extensions` and click `Load unpacked`.
 5. Select the `ts-autofiller` directory from your device.
 
-To use the extension, simply click on its icon. You should see a popup like this:
+To use the extension, login to [SuiteProjects Pro](https://auth.netsuitesuiteprojectspro.com),
+navigate to the timesheet submit form and simply click on the extension icon.
+You should see a popup like this:
 
 ![Popup](./popup.png)
+
+Fill all the fields according to your needs. If `Project prefix` is empty, the
+first project from the dropdown menu will be used. After clicking the `Autofill
+timesheets` button you should see that a new filled row appeared on the page.
+You can click it multiple times to insert additional rows if needed. 
+
+That's it, I hope I made submitting timesheets a little bit more convenient for
+you :)
 
