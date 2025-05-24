@@ -20,7 +20,14 @@ function evaluateExternalArgs() {
     const timeTypeRegexp = new RegExp(`^${globalArgs.timeType}$`)
 
     let emptyRow = document.querySelector(".gridDataEmptyRow")
+    if (typeof emptyRow === 'undefined') {
+        return
+    }
+
     let selects = emptyRow.querySelectorAll(".select-oa")
+    if (selects.length === 0) {
+        return
+    }
 
     // 0 - project
     // 1 - task
