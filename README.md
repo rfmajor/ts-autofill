@@ -28,10 +28,9 @@ case-sensitive. If it's empty, the first project from the `Customer : Project`
 dropdown menu will be used. After clicking the `Autofill timesheets` button you
 should see that a new filled row appeared on the page.
 
-```
+[!NOTE]
 Note: currently Monday-Friday are the only days which are taken into account
 when filling the timesheets.
-```
 
 You can click the button multiple times to insert additional rows if needed. 
 
