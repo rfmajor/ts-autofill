@@ -19,8 +19,6 @@ To use the extension, login to [SuiteProjects Pro](https://auth.netsuitesuitepro
 navigate to the timesheet submit form and simply click on the extension icon.
 You should see a popup like this:
 
-![Popup](./popup.png)
-
 Fill all the fields according to your needs. The `Project prefix` field is
 case-sensitive. If it's empty, the first project from the `Customer : Project`
 dropdown menu will be used. After clicking the `Autofill timesheets` button you
@@ -31,4 +29,6 @@ multiple times to insert additional rows if needed.
 
 That's it, I hope I made submitting timesheets a little bit more convenient for
 you :)
+
+https://github.com/user-attachments/assets/bf96ab66-303f-4f22-8b4b-ee020d07b30c
 
