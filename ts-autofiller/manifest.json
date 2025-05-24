@@ -9,7 +9,7 @@
   },
   "content_scripts": [
       {
-          "matches": ["https://grid-dynamics-international-inc.app.netsuitesuiteprojectspro.com/*"],
+          "matches": ["https://*.netsuitesuiteprojectspro.com/*"],
           "js": ["timesheets.js"]
       }
   ],

@@ -25,6 +25,10 @@ dropdown menu will be used. After clicking the `Autofill timesheets` button you
 should see that a new filled row appeared on the page. You can click it
 multiple times to insert additional rows if needed. 
 
+### Reloading
+In case you need to reload the extension, just go to `chrome://extensions/` ->
+`My extensions` and click on this extension's reload icon.
+
 ## Demo
 https://github.com/user-attachments/assets/bf96ab66-303f-4f22-8b4b-ee020d07b30c
 
