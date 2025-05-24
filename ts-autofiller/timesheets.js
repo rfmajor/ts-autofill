@@ -16,7 +16,8 @@ function evaluateExternalArgs() {
 
 (async () => {
     const globalArgs = evaluateExternalArgs()
-    console.log(globalArgs)
+    const taskRegexp = new RegExp(`^\\d:\\s${globalArgs.task}\\s\\[.*$`)
+    const timeTypeRegexp = new RegExp(`^${globalArgs.timeType}$`)
 
     let emptyRow = document.querySelector(".gridDataEmptyRow")
     let selects = emptyRow.querySelectorAll(".select-oa")
@@ -39,8 +40,7 @@ function evaluateExternalArgs() {
     }
 
     for (let option of selects[1].querySelectorAll("option")) {
-        const regexp = new RegExp(`^\\d:\\s${globalArgs.task}\\s\\[.*$`)
-        if (regexp.test(option.innerText)) {
+        if (taskRegexp.test(option.innerText)) {
             selects[1].value = option.value
             selects[1].dispatchEvent(new Event('change', { bubbles: true }));
             break
@@ -48,8 +48,7 @@ function evaluateExternalArgs() {
     }
 
     for (let option of selects[2].querySelectorAll("option")) {
-        const regexp = new RegExp(`^${globalArgs.timeType}$`)
-        if (regexp.test(option.innerText)) {
+        if (timeTypeRegexp.test(option.innerText)) {
             selects[2].value = option.value
             selects[2].dispatchEvent(new Event('change', { bubbles: true }));
             break

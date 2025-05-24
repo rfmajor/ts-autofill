@@ -15,14 +15,14 @@ async function runAutoFill() {
             window.globalArgs = args;
         },
         args: [{ 
-            projectPrefix: document.getElementById("projectPrefix").value,
-            task: document.getElementById("task").value,
-            timeType: document.getElementById("timeType").value,
-            hours: document.getElementById("hours").value,
-            notes: document.getElementById("notes").value,
-            overtimeType: document.getElementById("overtimeType").value,
-            compensationType: document.getElementById("compensationType").value,
-            administrativeTime: document.getElementById("administrativeTime").value,
+            projectPrefix: projectPrefix.value,
+            task: task.value,
+            timeType: timeType.value,
+            hours: hours.value,
+            notes: notes.value,
+            overtimeType: overtimeType.value,
+            compensationType: compensationType.value,
+            administrativeTime: administrativeTime.value,
         }]
     })
 
