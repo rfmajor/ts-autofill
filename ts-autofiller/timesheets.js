@@ -64,8 +64,10 @@ function evaluateExternalArgs() {
 
     let hours = Array.from(emptyRow.querySelectorAll(".timesheetHours input")).slice(0, 5)
     for (let input of hours) {
-        input.value = globalArgs.hours
-        input.dispatchEvent(new Event('change', { bubbles: true }));
+        if (!input.disabled) {
+            input.value = globalArgs.hours
+            input.dispatchEvent(new Event('change', { bubbles: true }));
+        }
     }
 
     let noteAdd = Array.from(emptyRow.querySelectorAll(".noteAddSmall")).slice(0, 5)
