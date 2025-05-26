@@ -83,7 +83,7 @@ window.onload = function() {
 
     chrome.storage.sync.get('projectPrefix', function(data) {
         if (typeof data.projectPrefix === 'undefined') {
-            projectPrefix.value = "Google"
+            projectPrefix.value = ""
         } else {
             projectPrefix.value = data.projectPrefix
         }
